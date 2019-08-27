@@ -7,4 +7,4 @@
        * Reliability check of PSO (<a href='https://github.com/jehyunlee/tmp/blob/master/notebook/PSO_analysis.ipynb'>Link</a>)
 
 *Summary :
-![summary](images/summary.png)
+![summary](images/summary.PNG)
