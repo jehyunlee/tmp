@@ -1,5 +1,5 @@
 # Capture Matrix Optimization Paper preparation
-1. Wind Data Analysis : (<a href='https://github.com/jehyunlee/tmp/blob/master/notebook/WindAnalysis_comp_IEC61400.ipynb'>Link</a>)  
+1. Wind Data Analysis : (<a href='https://github.com/jehyunlee/tmp/blob/master/markdown/WindAnalysis_comp_IEC61400.md'>Link</a>)  
 2. Capture Matrix Contruction by  
   2-1. IEC61400 (<a href='https://github.com/jehyunlee/tmp/blob/master/markdown/IEC61400.md'>Link</a>)  
   2-2. Q-Learning (<a href='https://github.com/jehyunlee/tmp/blob/master/notebook/QL_analysis_all.ipynb'>Link</a>)  
