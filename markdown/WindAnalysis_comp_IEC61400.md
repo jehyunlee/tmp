@@ -539,20 +539,22 @@ def windplot(df,    # pandas DataFrame
                          zorder=1)
         axes[ax].plot(df['indexMinutes'], df['mean10'], linewidth=2, color='lightgrey',zorder=0)
         axes[ax].set_xlim(0, 12500)
-        axes[ax].set_ylim(-3, df1['mean1'].max()*1.1)
+        axes[ax].set_ylim(-3, df1['mean1'].max()*1.2)
         axes[ax].tick_params(axis='y', labelsize=15)
         
         boxcolor = 'lightgrey' if ax < 4 else 'lightyellow'
-        boxprops = dict(boxstyle='round', facecolor=boxcolor, alpha=0.5)
-        axes[ax].text(0.02, 0.9, texts[ax], transform=axes[ax].transAxes, fontsize=14, verticalalignment='top', bbox=boxprops)
+        boxprops = dict(boxstyle='round', facecolor=boxcolor, alpha=0)
+        axes[ax].text(0.02, 0.9, texts[ax], transform=axes[ax].transAxes, fontsize=18, verticalalignment='top', bbox=boxprops)
 
 for i in range(6):
     windplot(eval('df' + str(i+1)), i)
 
-axes[4].tick_params(axis='x', labelsize=15)                                       
+axes[4].tick_params(axis='x', labelsize=15)
+
+fig.text(0.05, 0.5, 'Wind Speed (m/s)', ha='center', va='center', rotation='vertical', fontsize=20)
 plt.xlabel('Time (minutes since 18. Jan. 00:00)', labelpad = 20, fontsize=20)
 plt.tight_layout()
-plt.subplots_adjust(hspace=0, left=0.05, right=0.95, top=0.99, bottom=0.12)
+plt.subplots_adjust(hspace=0, left=0.15, right=0.95, top=0.99, bottom=0.12)
 plt.savefig('./WindAnalysis/images/winds_IEC.png', dpi=200)
 plt.show()
 ```
@@ -628,6 +630,7 @@ ax.tick_params(axis='x', labelsize=15)
 ax.tick_params(axis='y', labelsize=15)
 ax.set_ylim(0, 50000)
 ax.set_xlabel('Data Filtering', labelpad = 20, fontsize=20)
+ax.set_ylabel('Number of Wind Speed data', labelpad = 20, fontsize=20)
 
 plt.tight_layout()
 plt.savefig('./WindAnalysis/images/num_data_IEC.png', dpi=200)
